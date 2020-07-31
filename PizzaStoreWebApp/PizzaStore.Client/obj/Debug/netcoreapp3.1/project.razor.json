@@ -1,5 +1,5 @@
 {
-  "FilePath": "/home/hop/revature/week_3/PizzaStore/PizzaStore.Client/PizzaStore.Client.csproj",
+  "FilePath": "/home/hop/revature/week_3/PizzaStoreWebApp/PizzaStore.Client/PizzaStore.Client.csproj",
   "Configuration": {
     "ConfigurationName": "MVC-3.0",
     "LanguageVersion": "3.0",
@@ -20521,38 +20521,38 @@
   "RootNamespace": "PizzaStore.Client",
   "Documents": [
     {
-      "FilePath": "/home/hop/revature/week_3/PizzaStore/PizzaStore.Client/Views/Home/Index.cshtml",
-      "TargetPath": "Views\\Home\\Index.cshtml",
+      "FilePath": "/home/hop/revature/week_3/PizzaStoreWebApp/PizzaStore.Client/Views/Shared/_Layout.cshtml",
+      "TargetPath": "Views\\Shared\\_Layout.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "/home/hop/revature/week_3/PizzaStore/PizzaStore.Client/Views/Home/Privacy.cshtml",
-      "TargetPath": "Views\\Home\\Privacy.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "/home/hop/revature/week_3/PizzaStore/PizzaStore.Client/Views/_ViewStart.cshtml",
-      "TargetPath": "Views\\_ViewStart.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "/home/hop/revature/week_3/PizzaStore/PizzaStore.Client/Views/Shared/Error.cshtml",
-      "TargetPath": "Views\\Shared\\Error.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "/home/hop/revature/week_3/PizzaStore/PizzaStore.Client/Views/_ViewImports.cshtml",
-      "TargetPath": "Views\\_ViewImports.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "/home/hop/revature/week_3/PizzaStore/PizzaStore.Client/Views/Shared/_ValidationScriptsPartial.cshtml",
+      "FilePath": "/home/hop/revature/week_3/PizzaStoreWebApp/PizzaStore.Client/Views/Shared/_ValidationScriptsPartial.cshtml",
       "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "/home/hop/revature/week_3/PizzaStore/PizzaStore.Client/Views/Shared/_Layout.cshtml",
-      "TargetPath": "Views\\Shared\\_Layout.cshtml",
+      "FilePath": "/home/hop/revature/week_3/PizzaStoreWebApp/PizzaStore.Client/Views/Home/Index.cshtml",
+      "TargetPath": "Views\\Home\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/home/hop/revature/week_3/PizzaStoreWebApp/PizzaStore.Client/Views/Home/Privacy.cshtml",
+      "TargetPath": "Views\\Home\\Privacy.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/home/hop/revature/week_3/PizzaStoreWebApp/PizzaStore.Client/Views/_ViewImports.cshtml",
+      "TargetPath": "Views\\_ViewImports.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/home/hop/revature/week_3/PizzaStoreWebApp/PizzaStore.Client/Views/Shared/Error.cshtml",
+      "TargetPath": "Views\\Shared\\Error.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/home/hop/revature/week_3/PizzaStoreWebApp/PizzaStore.Client/Views/_ViewStart.cshtml",
+      "TargetPath": "Views\\_ViewStart.cshtml",
       "FileKind": "mvc"
     }
   ],
