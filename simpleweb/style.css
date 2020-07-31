@@ -1,0 +1,76 @@
+/* wildcard or omni selector */
+* {
+    color: blue;
+    color: #0000ff; /*hexidecimal*/
+    color: rgb(0,0,255); /*red, green blue*/
+    color: hsl(255,100,50); /*hue, saturation, light*/
+    color: hsla(255,100,50,1.0) /*hue, saturation, light, alpha*/
+}
+
+/* tag */
+h1 {
+    background-color: #ffffff
+}
+
+/* class */
+*.banner {
+    color: #00ff00;
+}
+
+/* id */
+*#copyright {
+    color: #00ffff;
+}
+
+/* compound selectors */
+/* ancestor-descendants */
+section p {
+    color: #ff0000;
+}
+
+/* parent-child */
+section > p {
+    color: #ff00ff;
+}
+
+/* adjacent siblings (sibling tags that are not seperated by any other tags)*/
+section + section {
+
+}
+
+/* all siblings (regardless of the sibling tags distance from one another in their parent tag)*/
+section ~ section {
+
+}
+
+/* pseudo class */
+h1:hover {
+    color: tomato;
+}
+
+a:link {
+    color: magenta;
+}
+
+a:active {
+    color: mediumspringgreen;
+}
+
+a:blur {
+
+}
+
+a:focus {
+    
+}
+
+/*
+    become familiar with nth-type, nth-child, pseudo elements
+*/
+
+/* 
+    specificity guide -- (0,0,0,0) tag = 1, class = 10, id = 100, !important = 1000 
+
+    ex: section p = 2
+    ex *#copyright w/ !important = 1100
+*/
