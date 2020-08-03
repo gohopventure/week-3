@@ -6,30 +6,29 @@ using PizzaStore.Domain.Models;
 
 namespace PizzaStore.Client.Controllers
 {
-    public class PizzaController : Controller
+    public class OrderController : Controller
     {
         private readonly PizzaStoreDbContext _db;
 
 
 
-
-
-        public PizzaController(PizzaStoreDbContext _dbContext)
+        public OrderController(PizzaStoreDbContext _dbContext)
         {
             _db = _dbContext;
         }
 
 
 
+        
         [HttpGet()]
-        public IEnumerable<PizzaModel> Get()
+        public IEnumerable<OrderModel> Get()
         {
-            return _db.Pizzas.ToList();
+            return _db.Orders.ToList();
         }
         [HttpGet("{id}")]
-        public PizzaModel Get(int id)
+        public OrderModel Get(int id)
         {
-            return _db.Pizzas.ToList().SingleOrDefault(p => p.Id == id);
+            return _db.Orders.ToList().SingleOrDefault(o => o.Id == id);
         }
     }
 }

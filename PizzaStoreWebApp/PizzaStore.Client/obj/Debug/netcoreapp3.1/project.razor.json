@@ -20554,6 +20554,11 @@
       "FilePath": "/home/hop/revature/week_3/PizzaStoreWebApp/PizzaStore.Client/Views/_ViewStart.cshtml",
       "TargetPath": "Views\\_ViewStart.cshtml",
       "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/home/hop/revature/week_3/PizzaStoreWebApp/PizzaStore.Client/Views/Pizza/Home.cshtml",
+      "TargetPath": "Views\\Pizza\\Home.cshtml",
+      "FileKind": "mvc"
     }
   ],
   "SerializationFormat": "0.2"
