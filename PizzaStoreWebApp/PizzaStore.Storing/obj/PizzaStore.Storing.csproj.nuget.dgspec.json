@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/hop/revature/week_3/PizzaStore/PizzaStore.Storing/PizzaStore.Storing.csproj": {}
+    "/home/hop/revature/week_3/PizzaStoreWebApp/PizzaStore.Storing/PizzaStore.Storing.csproj": {}
   },
   "projects": {
-    "/home/hop/revature/week_3/PizzaStore/PizzaStore.Domain/PizzaStore.Domain.csproj": {
+    "/home/hop/revature/week_3/PizzaStoreWebApp/PizzaStore.Domain/PizzaStore.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/hop/revature/week_3/PizzaStore/PizzaStore.Domain/PizzaStore.Domain.csproj",
+        "projectUniqueName": "/home/hop/revature/week_3/PizzaStoreWebApp/PizzaStore.Domain/PizzaStore.Domain.csproj",
         "projectName": "PizzaStore.Domain",
-        "projectPath": "/home/hop/revature/week_3/PizzaStore/PizzaStore.Domain/PizzaStore.Domain.csproj",
+        "projectPath": "/home/hop/revature/week_3/PizzaStoreWebApp/PizzaStore.Domain/PizzaStore.Domain.csproj",
         "packagesPath": "/home/hop/.nuget/packages/",
-        "outputPath": "/home/hop/revature/week_3/PizzaStore/PizzaStore.Domain/obj/",
+        "outputPath": "/home/hop/revature/week_3/PizzaStoreWebApp/PizzaStore.Domain/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/hop/.nuget/NuGet/NuGet.Config"
@@ -57,14 +57,14 @@
         }
       }
     },
-    "/home/hop/revature/week_3/PizzaStore/PizzaStore.Storing/PizzaStore.Storing.csproj": {
+    "/home/hop/revature/week_3/PizzaStoreWebApp/PizzaStore.Storing/PizzaStore.Storing.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/hop/revature/week_3/PizzaStore/PizzaStore.Storing/PizzaStore.Storing.csproj",
+        "projectUniqueName": "/home/hop/revature/week_3/PizzaStoreWebApp/PizzaStore.Storing/PizzaStore.Storing.csproj",
         "projectName": "PizzaStore.Storing",
-        "projectPath": "/home/hop/revature/week_3/PizzaStore/PizzaStore.Storing/PizzaStore.Storing.csproj",
+        "projectPath": "/home/hop/revature/week_3/PizzaStoreWebApp/PizzaStore.Storing/PizzaStore.Storing.csproj",
         "packagesPath": "/home/hop/.nuget/packages/",
-        "outputPath": "/home/hop/revature/week_3/PizzaStore/PizzaStore.Storing/obj/",
+        "outputPath": "/home/hop/revature/week_3/PizzaStoreWebApp/PizzaStore.Storing/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/hop/.nuget/NuGet/NuGet.Config"
@@ -78,8 +78,8 @@
         "frameworks": {
           "netstandard2.0": {
             "projectReferences": {
-              "/home/hop/revature/week_3/PizzaStore/PizzaStore.Domain/PizzaStore.Domain.csproj": {
-                "projectPath": "/home/hop/revature/week_3/PizzaStore/PizzaStore.Domain/PizzaStore.Domain.csproj"
+              "/home/hop/revature/week_3/PizzaStoreWebApp/PizzaStore.Domain/PizzaStore.Domain.csproj": {
+                "projectPath": "/home/hop/revature/week_3/PizzaStoreWebApp/PizzaStore.Domain/PizzaStore.Domain.csproj"
               }
             }
           }

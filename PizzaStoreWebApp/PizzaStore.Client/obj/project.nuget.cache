@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "l2u4tNsl6l6kyjz8jS2tEKGxPj5BBQbhYOHiZ1FimMpXQ7w5mg5ISEGppOlpZQMgvPtaqsUUhJ5OX+mUKvHTtA==",
+  "dgSpecHash": "MgXlWL1Fyb6x93oL4AESbnPEkGlLT/ES4FSMfpRe315v7poPoCd8gF0VLx0h2Ja371495kfUz0uQ2QID6LKiTg==",
   "success": true,
-  "projectFilePath": "/home/hop/revature/week_3/PizzaStore/PizzaStore.Client/PizzaStore.Client.csproj",
+  "projectFilePath": "/home/hop/revature/week_3/PizzaStoreWebApp/PizzaStore.Client/PizzaStore.Client.csproj",
   "expectedPackageFiles": [
     "/home/hop/.nuget/packages/microsoft.bcl.asyncinterfaces/1.1.1/microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "/home/hop/.nuget/packages/microsoft.bcl.hashcode/1.1.0/microsoft.bcl.hashcode.1.1.0.nupkg.sha512",

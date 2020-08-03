@@ -7,3 +7,12 @@
 /home/hop/revature/week_3/PizzaStore/PizzaStore.Domain/obj/Debug/netstandard2.0/PizzaStore.Domain.csproj.CoreCompileInputs.cache
 /home/hop/revature/week_3/PizzaStore/PizzaStore.Domain/obj/Debug/netstandard2.0/PizzaStore.Domain.dll
 /home/hop/revature/week_3/PizzaStore/PizzaStore.Domain/obj/Debug/netstandard2.0/PizzaStore.Domain.pdb
+/home/hop/revature/week_3/PizzaStoreWebApp/PizzaStore.Domain/bin/Debug/netstandard2.0/PizzaStore.Domain.deps.json
+/home/hop/revature/week_3/PizzaStoreWebApp/PizzaStore.Domain/bin/Debug/netstandard2.0/PizzaStore.Domain.dll
+/home/hop/revature/week_3/PizzaStoreWebApp/PizzaStore.Domain/bin/Debug/netstandard2.0/PizzaStore.Domain.pdb
+/home/hop/revature/week_3/PizzaStoreWebApp/PizzaStore.Domain/obj/Debug/netstandard2.0/PizzaStore.Domain.csprojAssemblyReference.cache
+/home/hop/revature/week_3/PizzaStoreWebApp/PizzaStore.Domain/obj/Debug/netstandard2.0/PizzaStore.Domain.AssemblyInfoInputs.cache
+/home/hop/revature/week_3/PizzaStoreWebApp/PizzaStore.Domain/obj/Debug/netstandard2.0/PizzaStore.Domain.AssemblyInfo.cs
+/home/hop/revature/week_3/PizzaStoreWebApp/PizzaStore.Domain/obj/Debug/netstandard2.0/PizzaStore.Domain.csproj.CoreCompileInputs.cache
+/home/hop/revature/week_3/PizzaStoreWebApp/PizzaStore.Domain/obj/Debug/netstandard2.0/PizzaStore.Domain.dll
+/home/hop/revature/week_3/PizzaStoreWebApp/PizzaStore.Domain/obj/Debug/netstandard2.0/PizzaStore.Domain.pdb

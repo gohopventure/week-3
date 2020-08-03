@@ -10,3 +10,15 @@
 /home/hop/revature/week_3/PizzaStore/PizzaStore.Storing/obj/Debug/netstandard2.0/PizzaStore.Storing.csproj.CopyComplete
 /home/hop/revature/week_3/PizzaStore/PizzaStore.Storing/obj/Debug/netstandard2.0/PizzaStore.Storing.dll
 /home/hop/revature/week_3/PizzaStore/PizzaStore.Storing/obj/Debug/netstandard2.0/PizzaStore.Storing.pdb
+/home/hop/revature/week_3/PizzaStoreWebApp/PizzaStore.Storing/bin/Debug/netstandard2.0/PizzaStore.Storing.deps.json
+/home/hop/revature/week_3/PizzaStoreWebApp/PizzaStore.Storing/bin/Debug/netstandard2.0/PizzaStore.Storing.dll
+/home/hop/revature/week_3/PizzaStoreWebApp/PizzaStore.Storing/bin/Debug/netstandard2.0/PizzaStore.Storing.pdb
+/home/hop/revature/week_3/PizzaStoreWebApp/PizzaStore.Storing/bin/Debug/netstandard2.0/PizzaStore.Domain.dll
+/home/hop/revature/week_3/PizzaStoreWebApp/PizzaStore.Storing/bin/Debug/netstandard2.0/PizzaStore.Domain.pdb
+/home/hop/revature/week_3/PizzaStoreWebApp/PizzaStore.Storing/obj/Debug/netstandard2.0/PizzaStore.Storing.csprojAssemblyReference.cache
+/home/hop/revature/week_3/PizzaStoreWebApp/PizzaStore.Storing/obj/Debug/netstandard2.0/PizzaStore.Storing.AssemblyInfoInputs.cache
+/home/hop/revature/week_3/PizzaStoreWebApp/PizzaStore.Storing/obj/Debug/netstandard2.0/PizzaStore.Storing.AssemblyInfo.cs
+/home/hop/revature/week_3/PizzaStoreWebApp/PizzaStore.Storing/obj/Debug/netstandard2.0/PizzaStore.Storing.csproj.CoreCompileInputs.cache
+/home/hop/revature/week_3/PizzaStoreWebApp/PizzaStore.Storing/obj/Debug/netstandard2.0/PizzaStore.Storing.csproj.CopyComplete
+/home/hop/revature/week_3/PizzaStoreWebApp/PizzaStore.Storing/obj/Debug/netstandard2.0/PizzaStore.Storing.dll
+/home/hop/revature/week_3/PizzaStoreWebApp/PizzaStore.Storing/obj/Debug/netstandard2.0/PizzaStore.Storing.pdb

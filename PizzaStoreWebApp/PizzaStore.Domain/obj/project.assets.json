@@ -185,11 +185,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/hop/revature/week_3/PizzaStore/PizzaStore.Domain/PizzaStore.Domain.csproj",
+      "projectUniqueName": "/home/hop/revature/week_3/PizzaStoreWebApp/PizzaStore.Domain/PizzaStore.Domain.csproj",
       "projectName": "PizzaStore.Domain",
-      "projectPath": "/home/hop/revature/week_3/PizzaStore/PizzaStore.Domain/PizzaStore.Domain.csproj",
+      "projectPath": "/home/hop/revature/week_3/PizzaStoreWebApp/PizzaStore.Domain/PizzaStore.Domain.csproj",
       "packagesPath": "/home/hop/.nuget/packages/",
-      "outputPath": "/home/hop/revature/week_3/PizzaStore/PizzaStore.Domain/obj/",
+      "outputPath": "/home/hop/revature/week_3/PizzaStoreWebApp/PizzaStore.Domain/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/hop/.nuget/NuGet/NuGet.Config"
