@@ -148,3 +148,6 @@
 /home/hop/revature/week_3/PizzaStoreWebApp/PizzaStore.Client/obj/Debug/netcoreapp3.1/PizzaStore.Client.dll
 /home/hop/revature/week_3/PizzaStoreWebApp/PizzaStore.Client/obj/Debug/netcoreapp3.1/PizzaStore.Client.pdb
 /home/hop/revature/week_3/PizzaStoreWebApp/PizzaStore.Client/obj/Debug/netcoreapp3.1/PizzaStore.Client.genruntimeconfig.cache
+/home/hop/revature/week_3/PizzaStoreWebApp/PizzaStore.Client/obj/Debug/netcoreapp3.1/Razor/Views/Pizza/Home.cshtml.g.cs
+/home/hop/revature/week_3/PizzaStoreWebApp/PizzaStore.Client/obj/Debug/netcoreapp3.1/Razor/Views/Pizza/Home2.cshtml.g.cs
+/home/hop/revature/week_3/PizzaStoreWebApp/PizzaStore.Client/obj/Debug/netcoreapp3.1/Razor/Views/Order/Order.cshtml.g.cs

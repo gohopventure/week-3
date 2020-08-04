@@ -3,12 +3,15 @@ using Microsoft.AspNetCore.Mvc;
 using System.Linq;
 using PizzaStore.Storing;
 using PizzaStore.Domain.Models;
+using PizzaStore.Client.Models;
+using PizzaStore.Domain.Factories;
 
 namespace PizzaStore.Client.Controllers
 {
     public class OrderController : Controller
     {
         private readonly PizzaStoreDbContext _db;
+
 
 
 
@@ -20,15 +23,22 @@ namespace PizzaStore.Client.Controllers
 
 
         
-        [HttpGet()]
-        public IEnumerable<OrderModel> Get()
+        [HttpGet()] // This is the default request
+        public IActionResult Home()
         {
-            return _db.Orders.ToList();
+            return View("Order", new PizzaViewModel());
         }
-        [HttpGet("{id}")]
-        public OrderModel Get(int id)
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult PlaceOrder(PizzaViewModel pizzaViewModel) // model binding
         {
-            return _db.Orders.ToList().SingleOrDefault(o => o.Id == id);
+            if (ModelState.IsValid)
+            {
+                var p = new PizzaFactory();
+                // repository.CreateOrder(pizzaViewModel); // once a valid order is placed
+                return View();
+            }
+            return View("Order", pizzaViewModel);
         }
     }
 }

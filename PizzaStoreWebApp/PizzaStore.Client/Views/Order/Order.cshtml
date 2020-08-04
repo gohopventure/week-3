@@ -1,0 +1,24 @@
+@model PizzaStore.Client.Models.PizzaViewModel
+
+@* html helper - creates a form *@
+@using(Html.BeginForm("PlaceOrder", "Order", null, FormMethod.Post))
+{
+    foreach(var crust in Model.Crusts)
+    {
+        Html.RadioButtonFor(m => m.Crust, crust.Name);
+        Html.LabelFor(m => m.Crust);
+        Html.ValidationMessageFor(m => m.Crust);
+    }
+
+    foreach(var topping in Model.Toppings)
+    {
+        Html.CheckBoxFor(m => m.SelectedTopping, new { name = "SelectedToppings", value = topping });
+        Html.LabelFor(m => m.SelectedToppings);
+        Html.ValidationMessageFor(m => m.SelectedToppings);
+    }
+    
+    Html.DropDownListFor(m => m.Sizes, new SelectList(Model.Sizes));
+    Html.ValidationMessageFor(m => m.Size);
+
+    <button type="submit">Place Order</button>
+}

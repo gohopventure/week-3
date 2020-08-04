@@ -5,7 +5,7 @@ namespace PizzaStore.Domain.Factories
 {
     public class PizzaFactory: AFactory<PizzaModel>
     {
-        public override PizzaModel CreateMenuItem()
+        public override PizzaModel Create()
         {
             var p = new PizzaModel();
 
