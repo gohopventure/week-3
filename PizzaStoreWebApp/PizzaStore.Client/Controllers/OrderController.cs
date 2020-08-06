@@ -8,7 +8,7 @@ using PizzaStore.Domain.Factories;
 
 namespace PizzaStore.Client.Controllers
 {
-    [Route("/Order/{id=1}")] // controller routing
+    // [Route("/Order/{id=1}")] // controller routing
     // [EnableCors("private")]
     public class OrderController : Controller
     {
@@ -25,7 +25,7 @@ namespace PizzaStore.Client.Controllers
 
 
         
-        [HttpGet()] // This is the default request
+        // [HttpGet()] // This is the default request
         public IActionResult Get(int id)
         {
             switch(id)

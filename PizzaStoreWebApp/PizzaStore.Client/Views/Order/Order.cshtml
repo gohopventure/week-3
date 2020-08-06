@@ -2,29 +2,38 @@
 
 @* HTML - creates a form *@
 <form action="/order" method="post">
-    <h2>Select a crust:</h2>
+    <h5>Select a crust:</h5>
     @foreach (var crust in @Model.Crusts)
     {
         <input type="radio" name="crust" id="crust" value="@crust.Name" data-val="true" data-val-required="Needed">
         <label for="crust">@crust.Name</label>
     }
     @Html.ValidationMessageFor(m => m.Crust, null, new { @class = "text-danger" })
+    <br>
     
-    <h2>Select a size:</h2>
-    @foreach (var size in @Model.Sizes)
-    {
-        <input type="radio" name="size" id="size" value="@size.Name" data-val="true" data-val-required="Needed">
-        <label for="crust">@size.Name</label>
-    }
-    @Html.ValidationMessageFor(m => m.Size, null, new { @class = "text-danger" })
+    <h5>Select a size:</h5>
+    <select name="size" id="">
+        @foreach (var size in @Model.Sizes)
+        {
+            <option value="@size.Name">@size.Name</option>
+            @* <input type="radio" name="size" id="size" value="@size.Name" data-val="true" data-val-required="Needed">
+            <label for="crust">@size.Name</label> *@
+        }
+        @Html.ValidationMessageFor(m => m.Size, null, new { @class = "text-danger" })
+    </select>
+    <br>
     
-    <h2>Select your toppings:</h2>
-    @foreach (var topping in @Model.Toppings)
-    {
-        <input type="radio" name="topping" id="topping" value="@topping.Name" data-val="true" data-val-required="Needed">
-        <label for="crust">@topping.Name</label>
-    }
-    @Html.ValidationMessageFor(m => m.SelectedToppings, null, new { @class = "text-danger" })
+    <h5>Select your toppings:</h5>
+    <select name="topping" id="">
+        @foreach (var topping in @Model.Toppings)
+        {
+            <option value="@topping.Name">@topping.Name</option>
+            @* <input type="radio" name="size" id="size" value="@size.Name" data-val="true" data-val-required="Needed">
+            <label for="crust">@size.Name</label> *@
+        }
+        @Html.ValidationMessageFor(m => m.SelectedToppings, null, new { @class = "text-danger" })
+    </select>
+    <br>
 
     <button type="submit">Add to Order</button>
 </form>

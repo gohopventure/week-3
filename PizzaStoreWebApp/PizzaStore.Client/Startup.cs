@@ -64,12 +64,12 @@ namespace PizzaStore.Client
 
             app.UseAuthorization();
 
-            // app.UseEndpoints(endpoints => // global routing
-            // {
-            //     endpoints.MapControllerRoute(
-            //         name: "default",
-            //         pattern: "{controller=Home}/{action=Index}/{id?}");
-            // });
+            app.UseEndpoints(endpoints => // global routing
+            {
+                endpoints.MapControllerRoute(
+                    name: "default",
+                    pattern: "{controller=Home}/{action=Index}/{id?}");
+            });
         }
     }
 }
