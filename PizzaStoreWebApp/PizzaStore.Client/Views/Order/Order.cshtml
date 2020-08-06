@@ -1,7 +1,36 @@
 @model PizzaStore.Client.Models.PizzaViewModel
 
+@* HTML - creates a form *@
+<form action="/order" method="post">
+    <h2>Select a crust:</h2>
+    @foreach (var crust in @Model.Crusts)
+    {
+        <input type="radio" name="crust" id="crust" value="@crust.Name" data-val="true" data-val-required="Needed">
+        <label for="crust">@crust.Name</label>
+    }
+    @Html.ValidationMessageFor(m => m.Crust, null, new { @class = "text-danger" })
+    
+    <h2>Select a size:</h2>
+    @foreach (var size in @Model.Sizes)
+    {
+        <input type="radio" name="size" id="size" value="@size.Name" data-val="true" data-val-required="Needed">
+        <label for="crust">@size.Name</label>
+    }
+    @Html.ValidationMessageFor(m => m.Size, null, new { @class = "text-danger" })
+    
+    <h2>Select your toppings:</h2>
+    @foreach (var topping in @Model.Toppings)
+    {
+        <input type="radio" name="topping" id="topping" value="@topping.Name" data-val="true" data-val-required="Needed">
+        <label for="crust">@topping.Name</label>
+    }
+    @Html.ValidationMessageFor(m => m.SelectedToppings, null, new { @class = "text-danger" })
+
+    <button type="submit">Add to Order</button>
+</form>
+
 @* html helper - creates a form *@
-@using(Html.BeginForm("PlaceOrder", "Order", null, FormMethod.Post))
+@* @using(Html.BeginForm("PlaceOrder", "Order", null, FormMethod.Post))
 {
     @Html.AntiForgeryToken();
     foreach(var crust in Model.Crusts)
@@ -11,15 +40,15 @@
         @Html.ValidationMessageFor(m => m.Crust);
     }
 
-    @* foreach(var topping in Model.Toppings)
+    foreach(var topping in Model.Toppings)
     {
         @Html.CheckBoxFor(m => m.SelectedTopping, new { name = "SelectedToppings", value = topping });
         @Html.LabelFor(m => m.SelectedTopping);
         @Html.ValidationMessageFor(m => m.SelectedTopping);
-    } *@
+    }
     
     @Html.DropDownListFor(m => m.Sizes, new SelectList(Model.Sizes));
     @Html.ValidationMessageFor(m => m.Size);
 
     <button type="submit">Place Order</button>
-}
+} *@
