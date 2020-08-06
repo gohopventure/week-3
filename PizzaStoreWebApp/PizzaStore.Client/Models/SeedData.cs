@@ -110,7 +110,7 @@ namespace PizzaStore.Client.Models
                     List<ToppingModel> newPizzaTopping = new List<ToppingModel>();
                     newTopping.Name = "Cheese";
                     newPizzaTopping.Add(newTopping);
-                    newPizza.Topping = newPizzaTopping;
+                    newPizza.Toppings = newPizzaTopping;
                     newPizza.Name = "Cheese";
                     newPizza.Crust = new domain.CrustModel{ Name = "Stuffed" };
                     newPizza.Size = new domain.SizeModel{ Name = "Large" };

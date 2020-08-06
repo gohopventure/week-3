@@ -6,6 +6,6 @@ namespace PizzaStore.Domain.Models
     {
         public SizeModel Size { get; set; } 
         public CrustModel Crust { get; set; }
-        public List<ToppingModel> Topping { get; set; }
+        public List<ToppingModel> Toppings { get; set; }
     }
 }

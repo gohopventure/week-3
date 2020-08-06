@@ -11,7 +11,7 @@ namespace PizzaStore.Domain.Factories
 
             p.Crust = new CrustModel();
             p.Size = new SizeModel();
-            p.Topping = new List<ToppingModel>{ new ToppingModel() };
+            p.Toppings = new List<ToppingModel>{ new ToppingModel() };
 
             return p;
         } 
