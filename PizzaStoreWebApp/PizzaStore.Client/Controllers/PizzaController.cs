@@ -26,7 +26,7 @@ namespace PizzaStore.Client.Controllers
         {
             // ViewData, and TempData are dictionaries, while ViewBag is a dynamic object
             // ViewData, and ViewBag are temporary, only survive the view, while TempData survives after the view is dismissed
-            // ViewBag.PizzaList = _db.Pizzas.ToList();
+            ViewBag.PizzaList = _db.Pizzas.ToList();
 
             // var DummyViewBag = new object(); // strongly-typed, type cannot be changed based on value as seen below
 

@@ -30,6 +30,17 @@ namespace PizzaStore.Client
             { 
                 options.UseSqlServer("server=hopsonpizzastore.database.windows.net;database=PizzaStoreDb;user id=sqladmin;password=hop88SeZ");
             });
+            services.AddCors(options => 
+            {
+                options.AddDefaultPolicy(poli =>
+                {
+                    poli.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin();
+                });
+                options.AddPolicy("private", poli =>
+                {
+                    poli.WithOrigins("microsoft.com").WithMethods("get", "post").WithHeaders("content-type");
+                });
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -45,6 +56,7 @@ namespace PizzaStore.Client
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
+            app.UseCors();
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 
@@ -52,12 +64,12 @@ namespace PizzaStore.Client
 
             app.UseAuthorization();
 
-            app.UseEndpoints(endpoints =>
-            {
-                endpoints.MapControllerRoute(
-                    name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
-            });
+            // app.UseEndpoints(endpoints => // global routing
+            // {
+            //     endpoints.MapControllerRoute(
+            //         name: "default",
+            //         pattern: "{controller=Home}/{action=Index}/{id?}");
+            // });
         }
     }
 }

@@ -8,6 +8,8 @@ using PizzaStore.Domain.Factories;
 
 namespace PizzaStore.Client.Controllers
 {
+    [Route("/Order/{id=1}")] // controller routing
+    // [EnableCors("private")]
     public class OrderController : Controller
     {
         private readonly PizzaStoreDbContext _db;
@@ -24,8 +26,17 @@ namespace PizzaStore.Client.Controllers
 
         
         [HttpGet()] // This is the default request
-        public IActionResult Home()
+        public IActionResult Get(int id)
         {
+            switch(id)
+            {
+                case 1:
+                    break;
+                case 2:
+                    break;
+                default:
+                    break;
+            }
             return View("Order", new PizzaViewModel());
         }
         [HttpPost]
@@ -35,8 +46,10 @@ namespace PizzaStore.Client.Controllers
             if (ModelState.IsValid)
             {
                 var p = new PizzaFactory();
+                // p.Create();
                 // repository.CreateOrder(pizzaViewModel); // once a valid order is placed
-                return View();
+                // return View("User"); // or 
+                return Redirect("/User/index"); // http 300-series status
             }
             return View("Order", pizzaViewModel);
         }

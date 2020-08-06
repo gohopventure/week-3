@@ -4,7 +4,6 @@ namespace PizzaStore.Domain.Factories
 {
     public interface IFactory<T> where T : class, new()
     {
-        T CreateMenuItem();
-        T CreateSpecialtyItems();
+        T Create();
     }
 }

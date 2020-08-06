@@ -3,9 +3,9 @@ using System.Collections.Generic;
 
 namespace PizzaStore.Domain.Factories
 {
-    public class PizzaFactory: AFactory<PizzaModel>
+    public class PizzaFactory: IFactory<PizzaModel>
     {
-        public override PizzaModel Create()
+        public PizzaModel Create()
         {
             var p = new PizzaModel();
 
@@ -13,7 +13,7 @@ namespace PizzaStore.Domain.Factories
             p.size = new SizeModel();
             p.topping = new List<ToppingModel>{ new ToppingModel() };
 
-            return new PizzaModel();
+            return p;
         } 
     }
 }
