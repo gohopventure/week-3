@@ -9,9 +9,9 @@ namespace PizzaStore.Domain.Factories
         {
             var p = new PizzaModel();
 
-            p.crust = new CrustModel();
-            p.size = new SizeModel();
-            p.topping = new List<ToppingModel>{ new ToppingModel() };
+            p.Crust = new CrustModel();
+            p.Size = new SizeModel();
+            p.Topping = new List<ToppingModel>{ new ToppingModel() };
 
             return p;
         } 
