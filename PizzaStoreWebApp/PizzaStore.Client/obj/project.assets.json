@@ -1279,6 +1279,19 @@
           "bin/placeholder/PizzaStore.Domain.dll": {}
         }
       },
+      "PizzaStore.Exchange/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "PizzaStore.Storing": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/PizzaStore.Exchange.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/PizzaStore.Exchange.dll": {}
+        }
+      },
       "PizzaStore.Storing/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
@@ -4985,6 +4998,11 @@
       "path": "../PizzaStore.Domain/PizzaStore.Domain.csproj",
       "msbuildProject": "../PizzaStore.Domain/PizzaStore.Domain.csproj"
     },
+    "PizzaStore.Exchange/1.0.0": {
+      "type": "project",
+      "path": "../PizzaStore.Exchange/PizzaStore.Exchange.csproj",
+      "msbuildProject": "../PizzaStore.Exchange/PizzaStore.Exchange.csproj"
+    },
     "PizzaStore.Storing/1.0.0": {
       "type": "project",
       "path": "../PizzaStore.Storing/PizzaStore.Storing.csproj",
@@ -4994,6 +5012,7 @@
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
       "PizzaStore.Domain >= 1.0.0",
+      "PizzaStore.Exchange >= 1.0.0",
       "PizzaStore.Storing >= 1.0.0",
       "microsoft.entityframeworkcore.design >= 3.1.6",
       "microsoft.entityframeworkcore.sqlserver >= 3.1.6"
@@ -5025,6 +5044,9 @@
           "projectReferences": {
             "/home/hop/revature/week_3/PizzaStoreWebApp/PizzaStore.Domain/PizzaStore.Domain.csproj": {
               "projectPath": "/home/hop/revature/week_3/PizzaStoreWebApp/PizzaStore.Domain/PizzaStore.Domain.csproj"
+            },
+            "/home/hop/revature/week_3/PizzaStoreWebApp/PizzaStore.Exchange/PizzaStore.Exchange.csproj": {
+              "projectPath": "/home/hop/revature/week_3/PizzaStoreWebApp/PizzaStore.Exchange/PizzaStore.Exchange.csproj"
             },
             "/home/hop/revature/week_3/PizzaStoreWebApp/PizzaStore.Storing/PizzaStore.Storing.csproj": {
               "projectPath": "/home/hop/revature/week_3/PizzaStoreWebApp/PizzaStore.Storing/PizzaStore.Storing.csproj"

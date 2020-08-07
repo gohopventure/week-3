@@ -25,6 +25,7 @@
       "PizzaStore.Client/1.0.0": {
         "dependencies": {
           "PizzaStore.Domain": "1.0.0",
+          "PizzaStore.Exchange": "1.0.0",
           "PizzaStore.Storing": "1.0.0",
           "Microsoft.EntityFrameworkCore.Design": "3.1.6",
           "Microsoft.EntityFrameworkCore.SqlServer": "3.1.6",
@@ -1220,6 +1221,17 @@
         },
         "compile": {
           "PizzaStore.Domain.dll": {}
+        }
+      },
+      "PizzaStore.Exchange/1.0.0": {
+        "dependencies": {
+          "PizzaStore.Storing": "1.0.0"
+        },
+        "runtime": {
+          "PizzaStore.Exchange.dll": {}
+        },
+        "compile": {
+          "PizzaStore.Exchange.dll": {}
         }
       },
       "PizzaStore.Storing/1.0.0": {
@@ -3460,6 +3472,11 @@
       "hashPath": "system.xml.xmlserializer.4.3.0.nupkg.sha512"
     },
     "PizzaStore.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "PizzaStore.Exchange/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

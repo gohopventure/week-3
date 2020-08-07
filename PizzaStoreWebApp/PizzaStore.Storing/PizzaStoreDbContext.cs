@@ -14,6 +14,7 @@ namespace PizzaStore.Storing
 
 
         public PizzaStoreDbContext(DbContextOptions options) : base(options){} // dependency injection
+        public PizzaStoreDbContext(){}
 
 
 

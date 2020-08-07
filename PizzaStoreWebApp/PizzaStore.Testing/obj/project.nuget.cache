@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "7nuxGWFsNlzSVYws1rwh+PdVPUzpJTtzOAR7j/W8rT82x0a1EgSd/s5SNVIPNLb04kkMb27p9dRs7Pt+QmUnbw==",
+  "dgSpecHash": "szNasixSne77+2XzYnitXC1qt8g/3C2FUbO2q+d/HtKVeWUN45vD42Qd1S+RgMBkZCa01QYKtJuo4L9YQpC+Ug==",
   "success": true,
-  "projectFilePath": "/home/hop/revature/week_3/PizzaStore/PizzaStore.Testing/PizzaStore.Testing.csproj",
+  "projectFilePath": "/home/hop/revature/week_3/PizzaStoreWebApp/PizzaStore.Testing/PizzaStore.Testing.csproj",
   "expectedPackageFiles": [
     "/home/hop/.nuget/packages/coverlet.collector/1.2.0/coverlet.collector.1.2.0.nupkg.sha512",
     "/home/hop/.nuget/packages/microsoft.codecoverage/16.5.0/microsoft.codecoverage.16.5.0.nupkg.sha512",

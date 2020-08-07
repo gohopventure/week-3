@@ -102,21 +102,21 @@ namespace PizzaStore.Client.Models
                     );
                 }
 
-                if(!context.Pizzas.Any())
-                {
-                    var newPizza = new domain.PizzaModel();
-                    var newTopping = new domain.ToppingModel();
+                // if(!context.Pizzas.Any())
+                // {
+                //     var newPizza = new domain.PizzaModel();
+                //     var newTopping = new domain.ToppingModel();
 
-                    List<ToppingModel> newPizzaTopping = new List<ToppingModel>();
-                    newTopping.Name = "Cheese";
-                    newPizzaTopping.Add(newTopping);
-                    newPizza.Toppings = newPizzaTopping;
-                    newPizza.Name = "Cheese";
-                    newPizza.Crust = new domain.CrustModel{ Name = "Stuffed" };
-                    newPizza.Size = new domain.SizeModel{ Name = "Large" };
+                //     List<ToppingModel> newPizzaTopping = new List<ToppingModel>();
+                //     newTopping.Name = "Cheese";
+                //     newPizzaTopping.Add(newTopping);
+                //     newPizza.Toppings = newPizzaTopping;
+                //     newPizza.Name = "Cheese";
+                //     newPizza.Crust = new domain.CrustModel{ Name = "Stuffed" };
+                //     newPizza.Size = new domain.SizeModel{ Name = "Large" };
 
-                    context.Pizzas.Add(newPizza);
-                }
+                //     context.Pizzas.Add(newPizza);
+                // }
 
                 context.SaveChanges();
             }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/hop/revature/week_3/PizzaStore/PizzaStore.Testing/PizzaStore.Testing.csproj": {}
+    "/home/hop/revature/week_3/PizzaStoreWebApp/PizzaStore.Testing/PizzaStore.Testing.csproj": {}
   },
   "projects": {
-    "/home/hop/revature/week_3/PizzaStore/PizzaStore.Testing/PizzaStore.Testing.csproj": {
+    "/home/hop/revature/week_3/PizzaStoreWebApp/PizzaStore.Testing/PizzaStore.Testing.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/hop/revature/week_3/PizzaStore/PizzaStore.Testing/PizzaStore.Testing.csproj",
+        "projectUniqueName": "/home/hop/revature/week_3/PizzaStoreWebApp/PizzaStore.Testing/PizzaStore.Testing.csproj",
         "projectName": "PizzaStore.Testing",
-        "projectPath": "/home/hop/revature/week_3/PizzaStore/PizzaStore.Testing/PizzaStore.Testing.csproj",
+        "projectPath": "/home/hop/revature/week_3/PizzaStoreWebApp/PizzaStore.Testing/PizzaStore.Testing.csproj",
         "packagesPath": "/home/hop/.nuget/packages/",
-        "outputPath": "/home/hop/revature/week_3/PizzaStore/PizzaStore.Testing/obj/",
+        "outputPath": "/home/hop/revature/week_3/PizzaStoreWebApp/PizzaStore.Testing/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/hop/.nuget/NuGet/NuGet.Config"

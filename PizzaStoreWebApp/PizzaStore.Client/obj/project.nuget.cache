@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "MgXlWL1Fyb6x93oL4AESbnPEkGlLT/ES4FSMfpRe315v7poPoCd8gF0VLx0h2Ja371495kfUz0uQ2QID6LKiTg==",
+  "dgSpecHash": "PT3qS5BCN86oQ5V/mpXaLdHbuOsTknBaP5SMml2uv2vxvjVPIJKvAhQ+EBAsMoo4QRxIQtx7cbgRIB6C2LI/3g==",
   "success": true,
   "projectFilePath": "/home/hop/revature/week_3/PizzaStoreWebApp/PizzaStore.Client/PizzaStore.Client.csproj",
   "expectedPackageFiles": [

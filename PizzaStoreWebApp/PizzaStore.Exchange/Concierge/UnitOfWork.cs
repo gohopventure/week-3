@@ -1,5 +1,6 @@
 using System;
 using PizzaStore.Storing;
+using PizzaStore.Storing.Factories;
 
 namespace PizzaStore.Exchange.Concierge
 {
@@ -20,6 +21,8 @@ namespace PizzaStore.Exchange.Concierge
 
 
         public IPizzaFactory Pizzas { get; private set; }
+
+        IPizzaFactory IUnitOfWork.Pizzas => throw new NotImplementedException();
 
         public int Complete()
         {
