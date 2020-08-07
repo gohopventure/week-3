@@ -34,11 +34,11 @@
             @* <input type="radio" name="size" id="size" value="@size.Name" data-val="true" data-val-required="Needed">
             <label for="crust">@size.Name</label> *@
         }
-        @Html.ValidationMessageFor(m => m.Pizza, null, new { @class = "text-danger" })
+        @Html.ValidationMessageFor(m => m.SelectedPizza, null, new { @class = "text-danger" })
     </select>
     <br><br>
     
-    @if(@Model.MenuItems.Equals(@Model.CustomPizza))
+    @if(@Model.SelectedPizza == @Model.CustomPizza.Name)
     {
         <h5>Select your toppings:</h5>
         @foreach (var topping in @Model.Toppings)

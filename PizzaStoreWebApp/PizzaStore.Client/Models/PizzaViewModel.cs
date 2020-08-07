@@ -80,8 +80,9 @@ namespace PizzaStore.Client.Models
         public string Size { get; set; }
 
         [Required(ErrorMessage = "Please select a Pizza")]
+        public string SelectedPizza { get; set; }
+
         public string Pizza { get; set; }
-        
         public PizzaModel CheesePizza { get; set; }
         public PizzaModel PepperoniPizza { get; set; }
         public PizzaModel SausagePizza { get; set; }
