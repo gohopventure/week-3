@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 using PizzaStore.Domain.Models;
-using PizzaStore.Domain.Factories;
+using PizzaStore.Storing.Factories;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using Microsoft.AspNetCore.Mvc;

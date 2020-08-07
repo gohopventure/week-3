@@ -28,7 +28,7 @@ namespace PizzaStore.Client
             services.AddControllersWithViews();
             services.AddDbContext<PizzaStoreDbContext>(options => 
             { 
-                options.UseSqlServer("server=hopsonpizzastore.database.windows.net;database=PizzaStoreDb;user id=sqladmin;password=hop88SeZ");
+                options.UseSqlServer(Configuration.GetConnectionString("mssql"));
             });
             services.AddCors(options => 
             {

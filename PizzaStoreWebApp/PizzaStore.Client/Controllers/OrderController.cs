@@ -4,7 +4,7 @@ using System.Linq;
 using PizzaStore.Storing;
 using PizzaStore.Domain.Models;
 using PizzaStore.Client.Models;
-using PizzaStore.Domain.Factories;
+using PizzaStore.Storing.Factories;
 
 namespace PizzaStore.Client.Controllers
 {
@@ -45,8 +45,8 @@ namespace PizzaStore.Client.Controllers
         {
             if (ModelState.IsValid)
             {
-                var p = new PizzaFactory();
-                // p.Create();
+                // var p = new PizzaFactory();
+                // var newPizza = p.Create();
                 // repository.CreateOrder(pizzaViewModel); // once a valid order is placed
                 // return View("User"); // or 
                 return Redirect("/User/index"); // http 300-series status
