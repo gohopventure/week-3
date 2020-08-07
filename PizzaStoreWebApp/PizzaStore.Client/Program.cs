@@ -8,6 +8,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using PizzaStore.Client.Models;
+using PizzaStore.Exchange.Concierge;
+using PizzaStore.Storing;
 
 namespace PizzaStore.Client
 {
@@ -23,7 +25,7 @@ namespace PizzaStore.Client
 
                 try
                 {
-                    // SeedData.Initialize(services);
+                    SeedData.Initialize(services);
                 }
                 catch(Exception e)
                 {

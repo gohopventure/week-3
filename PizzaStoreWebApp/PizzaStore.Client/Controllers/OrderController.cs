@@ -5,6 +5,7 @@ using PizzaStore.Storing;
 using PizzaStore.Domain.Models;
 using PizzaStore.Client.Models;
 using PizzaStore.Storing.Factories;
+using PizzaStore.Exchange.Concierge;
 
 namespace PizzaStore.Client.Controllers
 {
@@ -28,15 +29,13 @@ namespace PizzaStore.Client.Controllers
         // [HttpGet()] // This is the default request
         public IActionResult Get(int id)
         {
-            switch(id)
-            {
-                case 1:
-                    break;
-                case 2:
-                    break;
-                default:
-                    break;
-            }
+            UnitOfWork unitOfWork = new UnitOfWork(_db);
+
+            ViewBag.MenuItems = unitOfWork.Pizzas.GetAll();
+            ViewBag.Sizes = unitOfWork.Sizes.GetAll();
+            ViewBag.Crusts = unitOfWork.Crusts.GetAll();
+            ViewBag.Toppings = unitOfWork.Toppings.GetAll();
+
             return View("Order", new PizzaViewModel());
         }
         [HttpPost]

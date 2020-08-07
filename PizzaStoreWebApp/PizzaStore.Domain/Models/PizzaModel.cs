@@ -4,8 +4,8 @@ namespace PizzaStore.Domain.Models
 {
     public class PizzaModel : AModel
     {
-        public SizeModel Size { get; set; } 
-        public CrustModel Crust { get; set; }
-        public List<ToppingModel> Toppings { get; set; }
+        // public SizeModel Size { get; set; } 
+        // public CrustModel Crust { get; set; }
+        // public List<ToppingModel> Toppings { get; set; }
     }
 }
