@@ -20536,6 +20536,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "/home/hop/revature/week_3/PizzaStoreWebApp/PizzaStore.Client/Views/Order/AddPizza.cshtml",
+      "TargetPath": "Views\\Order\\AddPizza.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/home/hop/revature/week_3/PizzaStoreWebApp/PizzaStore.Client/Views/Home/Index.cshtml",
       "TargetPath": "Views\\Home\\Index.cshtml",
       "FileKind": "mvc"
@@ -20551,8 +20556,8 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "/home/hop/revature/week_3/PizzaStoreWebApp/PizzaStore.Client/Views/Order/Order.cshtml",
-      "TargetPath": "Views\\Order\\Order.cshtml",
+      "FilePath": "/home/hop/revature/week_3/PizzaStoreWebApp/PizzaStore.Client/Views/Order/Orders.cshtml",
+      "TargetPath": "Views\\Order\\Orders.cshtml",
       "FileKind": "mvc"
     },
     {

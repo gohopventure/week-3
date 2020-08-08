@@ -45,7 +45,6 @@ namespace PizzaStore.Client.Models
                         new domain.ToppingModel{ Name = "Chicken" },
                         new domain.ToppingModel{ Name = "Onions" },
                         new domain.ToppingModel{ Name = "Mushrooms" },
-                        new domain.ToppingModel{ Name = "Onions" },
                         new domain.ToppingModel{ Name = "Bell Peppers" },
                         new domain.ToppingModel{ Name = "Olives" }
                     );

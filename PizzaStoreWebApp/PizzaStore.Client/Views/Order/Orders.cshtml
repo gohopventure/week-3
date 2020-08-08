@@ -1,0 +1,65 @@
+@model PizzaStore.Client.Models.PizzaViewModel
+
+<h2>My Orders</h2>
+<a class="nav-link text-dark" asp-area="" asp-controller="Order" asp-action="AddPizza">Create New Order</a>
+<br>
+
+@* HTML - creates a form *@
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Order Date
+            </th>
+            <th>
+                Details
+            </th>
+            <th>
+                Order Total
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                
+            </td>
+            <td>
+                
+            </td>
+            <td>
+                
+            </td>
+            <td>
+                @* <a asp-action="" asp-route-id="">Edit</a> |
+                <a asp-action="" asp-route-id="">Details</a> |
+                <a asp-action="" asp-route-id="">Delete</a> *@
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+@* html helper - creates a form *@
+@* @using(Html.BeginForm("PlaceOrder", "Order", null, FormMethod.Post))
+{
+    @Html.AntiForgeryToken();
+    foreach(var crust in Model.Crusts)
+    {
+        @Html.RadioButtonFor(m => m.Crust, crust.Name);
+        @Html.LabelFor(m => m.Crust);
+        @Html.ValidationMessageFor(m => m.Crust);
+    }
+
+    foreach(var topping in Model.Toppings)
+    {
+        @Html.CheckBoxFor(m => m.SelectedTopping, new { name = "SelectedToppings", value = topping });
+        @Html.LabelFor(m => m.SelectedTopping);
+        @Html.ValidationMessageFor(m => m.SelectedTopping);
+    }
+    
+    @Html.DropDownListFor(m => m.Sizes, new SelectList(Model.Sizes));
+    @Html.ValidationMessageFor(m => m.Size);
+
+    <button type="submit">Place Order</button>
+} *@

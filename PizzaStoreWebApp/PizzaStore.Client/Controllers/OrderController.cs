@@ -26,8 +26,19 @@ namespace PizzaStore.Client.Controllers
 
 
         
-        // [HttpGet()] // This is the default request
-        public IActionResult Get()
+        // [HttpGet()]
+        public IActionResult Orders()
+        {
+            UnitOfWork unitOfWork = new UnitOfWork(_db);
+
+            ViewBag.MenuItems = unitOfWork.Orders.GetAll();
+
+            return View("Orders", new PizzaViewModel());
+        
+        }
+
+        // [HttpGet()]
+        public IActionResult AddPizza()
         {
             UnitOfWork unitOfWork = new UnitOfWork(_db);
 
@@ -36,8 +47,9 @@ namespace PizzaStore.Client.Controllers
             ViewBag.Crusts = unitOfWork.Crusts.GetAll();
             ViewBag.Toppings = unitOfWork.Toppings.GetAll();
 
-            return View("Order", new PizzaViewModel());
+            return View("AddPizza", new PizzaViewModel());
         }
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public IActionResult PlaceOrder(PizzaViewModel pizzaViewModel) // model binding
@@ -48,9 +60,9 @@ namespace PizzaStore.Client.Controllers
                 // var newPizza = p.Create();
                 // repository.CreateOrder(pizzaViewModel); // once a valid order is placed
                 // return View("User"); // or 
-                return Redirect("/User/index"); // http 300-series status
+                // return Redirect("/User/index"); // http 300-series status
             }
-            return View("Order", pizzaViewModel);
+            return View("Orders", pizzaViewModel);
         }
     }
 }

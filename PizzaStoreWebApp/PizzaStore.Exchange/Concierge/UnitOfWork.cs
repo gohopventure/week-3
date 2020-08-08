@@ -18,6 +18,7 @@ namespace PizzaStore.Exchange.Concierge
             Sizes = new SizeFactory(_context);
             Crusts = new CrustFactory(_context);
             Toppings = new ToppingFactory(_context);
+            Orders = new OrderFactory(_context);
         }
 
 
@@ -27,6 +28,7 @@ namespace PizzaStore.Exchange.Concierge
         public ISizeFactory Sizes { get; private set; }
         public ICrustFactory Crusts { get; private set; }
         public IToppingFactory Toppings { get; private set; }
+        public IOrderFactory Orders { get; private set; }
         
         public int Complete()
         {
