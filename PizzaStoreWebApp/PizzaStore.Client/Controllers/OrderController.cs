@@ -31,9 +31,9 @@ namespace PizzaStore.Client.Controllers
         {
             UnitOfWork unitOfWork = new UnitOfWork(_db);
 
-            ViewBag.MenuItems = unitOfWork.Orders.GetAll();
+            // ViewBag.MenuItems = unitOfWork.Orders.GetAll();
 
-            return View("Orders", new PizzaViewModel());
+            return View("Orders", new OrderViewModel());
         
         }
 

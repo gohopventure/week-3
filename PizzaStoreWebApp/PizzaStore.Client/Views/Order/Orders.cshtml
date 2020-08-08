@@ -1,4 +1,4 @@
-@model PizzaStore.Client.Models.PizzaViewModel
+@model PizzaStore.Client.Models.OrderViewModel
 
 <h2>My Orders</h2>
 <a class="nav-link text-dark" asp-area="" asp-controller="Order" asp-action="AddPizza">Create New Order</a>
@@ -12,7 +12,7 @@
                 Order Date
             </th>
             <th>
-                Details
+                Number of Items
             </th>
             <th>
                 Order Total
@@ -21,22 +21,26 @@
         </tr>
     </thead>
     <tbody>
+        @foreach(var o in @Model.Orders)
+        {
         <tr>
             <td>
-                
+                @Html.DisplayFor(o => o.Date)
             </td>
             <td>
-                
+                @Html.DisplayFor(o => o.Details)
             </td>
             <td>
-                
+                @Html.DisplayFor(o => o.OrderTotal)
             </td>
             <td>
+                <a asp-action="Orders" asp-route-id="">Details</a>
                 @* <a asp-action="" asp-route-id="">Edit</a> |
                 <a asp-action="" asp-route-id="">Details</a> |
                 <a asp-action="" asp-route-id="">Delete</a> *@
             </td>
         </tr>
+        }
     </tbody>
 </table>
 
