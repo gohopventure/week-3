@@ -2,9 +2,8 @@ using System.Collections.Generic;
 
 namespace PizzaStore.Domain.Models
 {
-    public class OrderModel
+    public class OrderModel : AModel
     {
-        public int Id { get; set; }
-        // public List<PizzaModel> Pizzas { get; set; }
+        public List<PizzaModel> Pizzas { get; set; }
     }
 }

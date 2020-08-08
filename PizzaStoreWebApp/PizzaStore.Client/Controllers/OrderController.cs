@@ -27,7 +27,7 @@ namespace PizzaStore.Client.Controllers
 
         
         // [HttpGet()] // This is the default request
-        public IActionResult Get(int id)
+        public IActionResult Get()
         {
             UnitOfWork unitOfWork = new UnitOfWork(_db);
 
