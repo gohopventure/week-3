@@ -34,7 +34,7 @@ namespace PizzaStore.Storing.Migrations
                     b.ToTable("Crusts");
                 });
 
-            modelBuilder.Entity("PizzaStore.Domain.Models.OrderModel", b =>
+            modelBuilder.Entity("PizzaStore.Domain.Models.MenuModel", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -44,7 +44,44 @@ namespace PizzaStore.Storing.Migrations
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<bool>("isSpecialtyItem")
+                        .HasColumnType("bit");
+
                     b.HasKey("Id");
+
+                    b.ToTable("MenuItems");
+                });
+
+            modelBuilder.Entity("PizzaStore.Domain.Models.OrderModel", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime>("Date")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Details")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<decimal>("OrderTotal")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<int?>("StoreModelId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("UserModelId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("StoreModelId");
+
+                    b.HasIndex("UserModelId");
 
                     b.ToTable("Orders");
                 });
@@ -84,6 +121,21 @@ namespace PizzaStore.Storing.Migrations
                     b.ToTable("Sizes");
                 });
 
+            modelBuilder.Entity("PizzaStore.Domain.Models.StoreModel", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Stores");
+                });
+
             modelBuilder.Entity("PizzaStore.Domain.Models.ToppingModel", b =>
                 {
                     b.Property<int>("Id")
@@ -97,6 +149,32 @@ namespace PizzaStore.Storing.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Toppings");
+                });
+
+            modelBuilder.Entity("PizzaStore.Domain.Models.UserModel", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Users");
+                });
+
+            modelBuilder.Entity("PizzaStore.Domain.Models.OrderModel", b =>
+                {
+                    b.HasOne("PizzaStore.Domain.Models.StoreModel", null)
+                        .WithMany("Orders")
+                        .HasForeignKey("StoreModelId");
+
+                    b.HasOne("PizzaStore.Domain.Models.UserModel", null)
+                        .WithMany("Orders")
+                        .HasForeignKey("UserModelId");
                 });
 
             modelBuilder.Entity("PizzaStore.Domain.Models.PizzaModel", b =>

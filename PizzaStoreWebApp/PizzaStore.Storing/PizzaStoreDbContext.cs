@@ -10,6 +10,9 @@ namespace PizzaStore.Storing
         public DbSet<SizeModel> Sizes { get; set; }
         public DbSet<ToppingModel> Toppings { get; set; }
         public DbSet<OrderModel> Orders { get; set; }
+        public DbSet<UserModel> Users { get; set; }
+        public DbSet<StoreModel> Stores { get; set; }
+        public DbSet<MenuModel> MenuItems { get; set; }
 
 
 
@@ -29,6 +32,9 @@ namespace PizzaStore.Storing
             builder.Entity<SizeModel>().HasKey(e => e.Id);
             builder.Entity<ToppingModel>().HasKey(e => e.Id);
             builder.Entity<OrderModel>().HasKey(e => e.Id);
+            builder.Entity<UserModel>().HasKey(e => e.Id);
+            builder.Entity<StoreModel>().HasKey(e => e.Id);
+            builder.Entity<MenuModel>().HasKey(e => e.Id);
         }
     }
 }

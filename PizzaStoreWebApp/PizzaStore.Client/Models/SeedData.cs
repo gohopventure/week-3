@@ -50,18 +50,18 @@ namespace PizzaStore.Client.Models
                     );
                 }
 
-                if(!context.Pizzas.Any())
+                if(!context.MenuItems.Any())
                 {
 
-                    context.Pizzas.AddRange(
-                        new domain.PizzaModel{ Name = "Cheese Pizza" },
-                        new domain.PizzaModel{ Name = "Pepperoni Pizza" },
-                        new domain.PizzaModel{ Name = "Sausage Pizza" },
-                        new domain.PizzaModel{ Name = "Chicken Pizza" },
-                        new domain.PizzaModel{ Name = "Supreme Pizza" },
-                        new domain.PizzaModel{ Name = "Meat Lover Pizza" },
-                        new domain.PizzaModel{ Name = "Veggie Pizza" },
-                        new domain.PizzaModel{ Name = "Custom Pizza" }
+                    context.MenuItems.AddRange(
+                        new domain.MenuModel{ Name = "Cheese", isSpecialtyItem = false },
+                        new domain.MenuModel{ Name = "Pepperoni", isSpecialtyItem = false },
+                        new domain.MenuModel{ Name = "Sausage", isSpecialtyItem = false },
+                        new domain.MenuModel{ Name = "Chicken", isSpecialtyItem = false },
+                        new domain.MenuModel{ Name = "Supreme", isSpecialtyItem = false },
+                        new domain.MenuModel{ Name = "Meat Lover", isSpecialtyItem = false },
+                        new domain.MenuModel{ Name = "Veggie", isSpecialtyItem = false },
+                        new domain.MenuModel{ Name = "Custom", isSpecialtyItem = true }
                     );
                 }
 

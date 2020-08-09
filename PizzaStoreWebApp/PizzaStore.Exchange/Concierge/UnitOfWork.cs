@@ -14,6 +14,7 @@ namespace PizzaStore.Exchange.Concierge
         public UnitOfWork(PizzaStoreDbContext context)
         {
             _context = context;
+            MenuItems = new MenuFactory(_context);
             Pizzas = new PizzaFactory(_context);
             Sizes = new SizeFactory(_context);
             Crusts = new CrustFactory(_context);
@@ -24,6 +25,7 @@ namespace PizzaStore.Exchange.Concierge
 
 
 
+        public IMenuFactory MenuItems { get; set; }
         public IPizzaFactory Pizzas { get; private set; }
         public ISizeFactory Sizes { get; private set; }
         public ICrustFactory Crusts { get; private set; }

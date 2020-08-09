@@ -42,7 +42,7 @@ namespace PizzaStore.Client.Controllers
         {
             UnitOfWork unitOfWork = new UnitOfWork(_db);
 
-            ViewBag.MenuItems = unitOfWork.Pizzas.GetAll();
+            ViewBag.MenuItems = unitOfWork.MenuItems.GetAll();
             ViewBag.Sizes = unitOfWork.Sizes.GetAll();
             ViewBag.Crusts = unitOfWork.Crusts.GetAll();
             ViewBag.Toppings = unitOfWork.Toppings.GetAll();

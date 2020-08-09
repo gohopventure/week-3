@@ -10,8 +10,8 @@ using PizzaStore.Storing;
 namespace PizzaStore.Storing.Migrations
 {
     [DbContext(typeof(PizzaStoreDbContext))]
-    [Migration("20200808185354_third migration")]
-    partial class thirdmigration
+    [Migration("20200809022906_first migration")]
+    partial class firstmigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -43,10 +43,29 @@ namespace PizzaStore.Storing.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<DateTime>("Date")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Details")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<decimal>("OrderTotal")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<int?>("StoreModelId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("UserModelId")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
+
+                    b.HasIndex("StoreModelId");
+
+                    b.HasIndex("UserModelId");
 
                     b.ToTable("Orders");
                 });
@@ -86,6 +105,21 @@ namespace PizzaStore.Storing.Migrations
                     b.ToTable("Sizes");
                 });
 
+            modelBuilder.Entity("PizzaStore.Domain.Models.StoreModel", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Stores");
+                });
+
             modelBuilder.Entity("PizzaStore.Domain.Models.ToppingModel", b =>
                 {
                     b.Property<int>("Id")
@@ -99,6 +133,32 @@ namespace PizzaStore.Storing.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Toppings");
+                });
+
+            modelBuilder.Entity("PizzaStore.Domain.Models.UserModel", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Users");
+                });
+
+            modelBuilder.Entity("PizzaStore.Domain.Models.OrderModel", b =>
+                {
+                    b.HasOne("PizzaStore.Domain.Models.StoreModel", null)
+                        .WithMany("Orders")
+                        .HasForeignKey("StoreModelId");
+
+                    b.HasOne("PizzaStore.Domain.Models.UserModel", null)
+                        .WithMany("Orders")
+                        .HasForeignKey("UserModelId");
                 });
 
             modelBuilder.Entity("PizzaStore.Domain.Models.PizzaModel", b =>
