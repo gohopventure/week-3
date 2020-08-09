@@ -82,7 +82,7 @@ namespace PizzaStore.Client.Models
         public string Size { get; set; }
 
         [Required(ErrorMessage = "Please select a Pizza")]
-        public string SelectedPizza { get; set; }
+        public string MenuItems { get; set; }
 
         // public string Pizza { get; set; }
         // public PizzaModel CheesePizza { get; set; }
@@ -92,11 +92,11 @@ namespace PizzaStore.Client.Models
         // public PizzaModel SupremePizza { get; set; }
         // public PizzaModel CustomPizza { get; set; }
 
-        [DisplayName("Toppings")]
-        [Required(ErrorMessage = "Please select at least two toppings")]
-        [MinLength(_min_toppings, ErrorMessage = "Please select a minimum of {1} toppings")]
-        [MaxLength(_max_toppings, ErrorMessage = "Please select a maximum of {1} toppings")]
-        public List<string> SelectedToppings { get; set; }
+        // [DisplayName("Toppings")]
+        // [Required(ErrorMessage = "Please select at least two toppings")]
+        // [MinLength(_min_toppings, ErrorMessage = "Please select a minimum of {1} toppings")]
+        // [MaxLength(_max_toppings, ErrorMessage = "Please select a maximum of {1} toppings")]
+        // public List<string> SelectedToppings { get; set; }
 
         // public bool SelectedTopping { get; set; }
         // public List<PizzaModel> PizzaList { get; set; }

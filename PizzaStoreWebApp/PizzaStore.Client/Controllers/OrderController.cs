@@ -52,17 +52,21 @@ namespace PizzaStore.Client.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult PlaceOrder(PizzaViewModel pizzaViewModel) // model binding
+        public IActionResult PlaceOrder(PizzaViewModel model) // model binding
         {
             if (ModelState.IsValid)
             {
-                // var p = new PizzaFactory();
-                // var newPizza = p.Create();
-                // repository.CreateOrder(pizzaViewModel); // once a valid order is placed
-                // return View("User"); // or 
-                // return Redirect("/User/index"); // http 300-series status
+                return RedirectToAction("Orders");
             }
-            return View("Orders", pizzaViewModel);
+
+            UnitOfWork unitOfWork = new UnitOfWork(_db);
+
+            ViewBag.MenuItems = unitOfWork.MenuItems.GetAll();
+            ViewBag.Sizes = unitOfWork.Sizes.GetAll();
+            ViewBag.Crusts = unitOfWork.Crusts.GetAll();
+            ViewBag.Toppings = unitOfWork.Toppings.GetAll();
+            
+            return View("AddPizza", model);
         }
     }
 }
