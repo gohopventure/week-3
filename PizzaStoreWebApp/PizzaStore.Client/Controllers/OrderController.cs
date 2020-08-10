@@ -65,9 +65,12 @@ namespace PizzaStore.Client.Controllers
             if (ModelState.IsValid)
             {
                 List<PizzaModel> pizzas = new List<PizzaModel>();
-                pizzas.Add( new PizzaModel{ Name = model.MenuItems } );
+                pizzas.Add( new PizzaModel{ Name = model.MenuItems, Price = 10.99m } );
 
-                OrderModel order = new OrderModel{ Date = DateTime.Now, Pizzas = pizzas/*, Details = "", OrderTotal = 10.99m*/ };
+                OrderModel order = new OrderModel();
+                order.Pizzas = pizzas;
+                order.ComputeOrderTotal();
+                order.Date = DateTime.Now;
 
                 unitOfWork.Orders.Add(order); 
                 unitOfWork.Complete();

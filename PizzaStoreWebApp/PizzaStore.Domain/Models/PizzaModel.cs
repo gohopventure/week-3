@@ -7,5 +7,6 @@ namespace PizzaStore.Domain.Models
         // public SizeModel Size { get; set; } 
         // public CrustModel Crust { get; set; }
         // public List<ToppingModel> Toppings { get; set; }
+        public decimal Price { get; set; }
     }
 }

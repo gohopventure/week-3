@@ -9,6 +9,17 @@ namespace PizzaStore.Domain.Models
         public List<PizzaModel> Pizzas { get; set; }
         public DateTime Date { get; set; }
         // public string Details { get; set; }
-        // public decimal OrderTotal { get; set; }
+        public decimal OrderTotal { get; set; }
+        public void ComputeOrderTotal()
+        {
+            decimal total = 0m; 
+
+            foreach (var p in Pizzas)
+            {
+                total += p.Price;
+            }
+
+            OrderTotal = total;
+        }
     }
 }
