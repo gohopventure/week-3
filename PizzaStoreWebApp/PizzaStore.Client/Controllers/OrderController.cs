@@ -34,8 +34,17 @@ namespace PizzaStore.Client.Controllers
 
             ViewBag.Orders = unitOfWork.Orders.GetAll();
 
-            return View("Orders", new OrderViewModel());
+            return View("Orders");
         
+        }
+        
+        public IActionResult OrderDetails()
+        {
+            UnitOfWork unitOfWork = new UnitOfWork(_db);
+
+            ViewBag.Pizzas = unitOfWork.Pizzas.GetAll();
+
+            return View("OrderDetails");
         }
 
         // [HttpGet()]
@@ -64,12 +73,19 @@ namespace PizzaStore.Client.Controllers
 
             if (ModelState.IsValid)
             {
+                var size = unitOfWork.Sizes.Find(s => s.Name == model.Size).FirstOrDefault();
+                var crust = unitOfWork.Crusts.Find(c => c.Name == model.Crust).FirstOrDefault();
+                var pizza = new PizzaModel{ Name = model.MenuItems, Size = size, Crust = crust };
+
+                pizza.ComputePrice();
+
                 List<PizzaModel> pizzas = new List<PizzaModel>();
-                pizzas.Add( new PizzaModel{ Name = model.MenuItems, Price = 10.99m } );
+                pizzas.Add( pizza );
 
                 OrderModel order = new OrderModel();
                 order.Pizzas = pizzas;
                 order.ComputeOrderTotal();
+                order.GetDetails();
                 order.Date = DateTime.Now;
 
                 unitOfWork.Orders.Add(order); 

@@ -1,5 +1,3 @@
-@model PizzaStore.Client.Models.OrderViewModel
-
 <h2>My Orders</h2>
 <a class="nav-link text-dark" asp-area="" asp-controller="Order" asp-action="AddPizza">Create New Order</a>
 <br>
@@ -12,7 +10,7 @@
                 Order Date
             </th>
             <th>
-                @* Number of Items *@
+                Number of Items
             </th>
             <th>
                 Order Total
@@ -28,13 +26,13 @@
                 @order.Date
             </td>
             <td>
-                @* @Html.DisplayFor(o => o.Details) *@
+                @order.Details
             </td>
             <td>
                 @order.OrderTotal
             </td>
             <td>
-                <a asp-action="Orders" asp-route-id="">Details</a>
+                <a asp-action="OrderDetails" asp-route-id="">Details</a>
                 @* <a asp-action="" asp-route-id="">Edit</a> |
                 <a asp-action="" asp-route-id="">Details</a> |
                 <a asp-action="" asp-route-id="">Delete</a> *@

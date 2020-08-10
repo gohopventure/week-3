@@ -1,0 +1,36 @@
+<h2>Order Details</h2>
+<br>
+
+@* HTML - creates a form *@
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Pizzas
+            </th>
+            <th>
+                Toppings
+            </th>
+            <th>
+                Price
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var pizza in ViewBag.Pizzas)
+        {
+        <tr>
+            <td>
+                @pizza.Name
+            </td>
+            <td>
+                
+            </td>
+            <td>
+                @pizza.Price
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>

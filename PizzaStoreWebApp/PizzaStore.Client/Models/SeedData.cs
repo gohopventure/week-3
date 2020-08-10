@@ -16,23 +16,38 @@ namespace PizzaStore.Client.Models
             using(var context = new PizzaStoreDbContext(
                 serviceProvider.GetRequiredService<DbContextOptions<PizzaStoreDbContext>>()))
             {
+                if(!context.Users.Any())
+                {
+                    context.Users.AddRange(
+                        new domain.UserModel{ Name = "Harry" }
+                    );
+                }
+
+                if(!context.Stores.Any())
+                {
+                    context.Stores.AddRange(
+                        new domain.StoreModel{ Name = "Store1" },
+                        new domain.StoreModel{ Name = "Store2" }
+                    );
+                }
+
                 if(!context.Crusts.Any())
                 {
                     context.Crusts.AddRange(
-                        new domain.CrustModel{ Name = "Thin" },
-                        new domain.CrustModel{ Name = "Pan" },
-                        new domain.CrustModel{ Name = "Deep Dish" },
-                        new domain.CrustModel{ Name = "Stuffed" }
+                        new domain.CrustModel{ Name = "Thin", Price = 0.99m  },
+                        new domain.CrustModel{ Name = "Pan", Price = 1.99m  },
+                        new domain.CrustModel{ Name = "Deep Dish", Price = 2.99m  },
+                        new domain.CrustModel{ Name = "Stuffed", Price = 3.99m  }
                     );
                 }
 
                 if(!context.Sizes.Any())
                 {
                     context.Sizes.AddRange(
-                        new domain.SizeModel{ Name = "Personal" },
-                        new domain.SizeModel{ Name = "Small" },
-                        new domain.SizeModel{ Name = "Medium" },
-                        new domain.SizeModel{ Name = "Large" }
+                        new domain.SizeModel{ Name = "Personal", Price = 2.99m },
+                        new domain.SizeModel{ Name = "Small", Price = 3.99m  },
+                        new domain.SizeModel{ Name = "Medium", Price = 5.99m  },
+                        new domain.SizeModel{ Name = "Large", Price = 7.99m  }
                     );
                 }
 

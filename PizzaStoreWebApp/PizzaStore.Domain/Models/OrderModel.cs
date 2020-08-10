@@ -8,8 +8,9 @@ namespace PizzaStore.Domain.Models
         public int Id { get; set; }
         public List<PizzaModel> Pizzas { get; set; }
         public DateTime Date { get; set; }
-        // public string Details { get; set; }
+        public string Details { get; set; }
         public decimal OrderTotal { get; set; }
+
         public void ComputeOrderTotal()
         {
             decimal total = 0m; 
@@ -20,6 +21,18 @@ namespace PizzaStore.Domain.Models
             }
 
             OrderTotal = total;
+        }
+
+        public void GetDetails()
+        {
+            int count = 0;
+
+            foreach (var pizza in Pizzas)
+            {
+                count += 1;
+            }
+
+            Details = $"{count} Item(s)";
         }
     }
 }

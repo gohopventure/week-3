@@ -20521,6 +20521,11 @@
   "RootNamespace": "PizzaStore.Client",
   "Documents": [
     {
+      "FilePath": "/home/hop/revature/week_3/PizzaStoreWebApp/PizzaStore.Client/Views/Order/OrderDetails.cshtml",
+      "TargetPath": "Views\\Order\\OrderDetails.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/home/hop/revature/week_3/PizzaStoreWebApp/PizzaStore.Client/Views/Shared/_Layout.cshtml",
       "TargetPath": "Views\\Shared\\_Layout.cshtml",
       "FileKind": "mvc"
