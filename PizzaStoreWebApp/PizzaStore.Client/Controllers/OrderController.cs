@@ -32,7 +32,7 @@ namespace PizzaStore.Client.Controllers
         {
             UnitOfWork unitOfWork = new UnitOfWork(_db);
 
-            // ViewBag.MenuItems = unitOfWork.Orders.GetAll();
+            ViewBag.Orders = unitOfWork.Orders.GetAll();
 
             return View("Orders", new OrderViewModel());
         
@@ -66,8 +66,6 @@ namespace PizzaStore.Client.Controllers
             {
                 List<PizzaModel> pizzas = new List<PizzaModel>();
                 pizzas.Add( new PizzaModel{ Name = model.MenuItems } );
-
-                // PizzaModel pizza = new PizzaModel{ Name = model.MenuItems };
 
                 OrderModel order = new OrderModel{ Date = DateTime.Now, Pizzas = pizzas/*, Details = "", OrderTotal = 10.99m*/ };
 

@@ -12,26 +12,26 @@
                 Order Date
             </th>
             <th>
-                Number of Items
+                @* Number of Items *@
             </th>
             <th>
-                Order Total
+                @* Order Total *@
             </th>
             <th></th>
         </tr>
     </thead>
     <tbody>
-        @foreach(var o in @Model.Orders)
+        @foreach(var order in ViewBag.Orders)
         {
         <tr>
             <td>
-                @Html.DisplayFor(o => o.Date)
+                @order.Date
             </td>
             <td>
-                @Html.DisplayFor(o => o.Details)
+                @* @Html.DisplayFor(o => o.Details) *@
             </td>
             <td>
-                @Html.DisplayFor(o => o.OrderTotal)
+                @* @Html.DisplayFor(o => o.OrderTotal) *@
             </td>
             <td>
                 <a asp-action="Orders" asp-route-id="">Details</a>
