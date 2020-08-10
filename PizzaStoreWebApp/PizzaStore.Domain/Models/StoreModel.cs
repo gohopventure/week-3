@@ -4,6 +4,6 @@ namespace PizzaStore.Domain.Models
 {
     public class StoreModel : AModel
     {
-        public List<OrderModel> Orders { get; set; }
+        // public List<OrderModel> Orders { get; set; }
     }
 }

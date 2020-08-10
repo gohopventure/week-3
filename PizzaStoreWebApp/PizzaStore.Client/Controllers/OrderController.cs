@@ -6,6 +6,7 @@ using PizzaStore.Domain.Models;
 using PizzaStore.Client.Models;
 using PizzaStore.Storing.Factories;
 using PizzaStore.Exchange.Concierge;
+using System;
 
 namespace PizzaStore.Client.Controllers
 {
@@ -54,17 +55,28 @@ namespace PizzaStore.Client.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult PlaceOrder(PizzaViewModel model) // model binding
         {
-            if (ModelState.IsValid)
-            {
-                return RedirectToAction("Orders");
-            }
-
             UnitOfWork unitOfWork = new UnitOfWork(_db);
 
             ViewBag.MenuItems = unitOfWork.MenuItems.GetAll();
             ViewBag.Sizes = unitOfWork.Sizes.GetAll();
             ViewBag.Crusts = unitOfWork.Crusts.GetAll();
             ViewBag.Toppings = unitOfWork.Toppings.GetAll();
+
+            if (ModelState.IsValid)
+            {
+                // List<PizzaModel> pizzas = new List<PizzaModel>();
+                // pizzas.Add( new PizzaModel{ Name = model.MenuItems } );
+
+                // PizzaModel pizza = new PizzaModel{ Name = model.MenuItems };
+
+                // OrderModel order = new OrderModel{ Date = DateTime.Now, Pizzas = pizzas/*, Details = "", OrderTotal = 10.99m*/ };
+
+                unitOfWork.Pizzas.Add( new PizzaModel{ Name = model.MenuItems } ); 
+                unitOfWork.Complete();
+                unitOfWork.Dispose();
+
+                return RedirectToAction("Orders");
+            }
             
             return View("AddPizza", model);
         }

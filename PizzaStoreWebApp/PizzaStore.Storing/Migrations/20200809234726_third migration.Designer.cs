@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using PizzaStore.Storing;
 
 namespace PizzaStore.Storing.Migrations
 {
     [DbContext(typeof(PizzaStoreDbContext))]
-    partial class PizzaStoreDbContextModelSnapshot : ModelSnapshot
+    [Migration("20200809234726_third migration")]
+    partial class thirdmigration
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -77,7 +79,12 @@ namespace PizzaStore.Storing.Migrations
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int?>("OrderModelId")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
+
+                    b.HasIndex("OrderModelId");
 
                     b.ToTable("Pizzas");
                 });
@@ -140,6 +147,13 @@ namespace PizzaStore.Storing.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Users");
+                });
+
+            modelBuilder.Entity("PizzaStore.Domain.Models.PizzaModel", b =>
+                {
+                    b.HasOne("PizzaStore.Domain.Models.OrderModel", null)
+                        .WithMany("Pizzas")
+                        .HasForeignKey("OrderModelId");
                 });
 #pragma warning restore 612, 618
         }
