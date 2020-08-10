@@ -64,14 +64,14 @@ namespace PizzaStore.Client.Controllers
 
             if (ModelState.IsValid)
             {
-                // List<PizzaModel> pizzas = new List<PizzaModel>();
-                // pizzas.Add( new PizzaModel{ Name = model.MenuItems } );
+                List<PizzaModel> pizzas = new List<PizzaModel>();
+                pizzas.Add( new PizzaModel{ Name = model.MenuItems } );
 
                 // PizzaModel pizza = new PizzaModel{ Name = model.MenuItems };
 
-                // OrderModel order = new OrderModel{ Date = DateTime.Now, Pizzas = pizzas/*, Details = "", OrderTotal = 10.99m*/ };
+                OrderModel order = new OrderModel{ Date = DateTime.Now, Pizzas = pizzas/*, Details = "", OrderTotal = 10.99m*/ };
 
-                unitOfWork.Pizzas.Add( new PizzaModel{ Name = model.MenuItems } ); 
+                unitOfWork.Orders.Add(order); 
                 unitOfWork.Complete();
                 unitOfWork.Dispose();
 
